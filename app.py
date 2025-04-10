@@ -1,4 +1,11 @@
 import streamlit as st
+from PIL import Image
+
+level = st.slider("Choose Arm Level", 1, 10, 1)
+img = Image.open(f"images/overlays/arms_{level}.png")
+st.image(img)
+
+import streamlit as st
 import pandas as pd
 
 # Initialize session state
